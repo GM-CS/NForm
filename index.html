@@ -27,7 +27,279 @@
 
         <div class="form-control">
             <label for="role" id="label-role">Which option best describes you?</label>
-            <select name="role" id="role">
+            <select name="role" id="role"><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Feedback Form</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h2>Feedback Form</h2>
+
+  <form action="#" method="POST" netlify>
+
+    <!-- Name Field -->
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+    </div>
+
+    <!-- Email Field -->
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+    </div>
+
+        <!-- Services Selection -->
+        <div class="form-group">
+          <label><strong>What services do you interact with?</strong></label>
+          <div class="checkbox-group">
+            <label><input type="checkbox" class="service-checkbox" data-target="q1" /> Service A</label>
+            <label><input type="checkbox" class="service-checkbox" data-target="q2" /> Service B</label>
+            <label><input type="checkbox" class="service-checkbox" data-target="q3" /> Service C</label>
+            <label><input type="checkbox" class="service-checkbox" data-target="q4" /> Service D</label>
+            <label><input type="checkbox" class="service-checkbox" data-target="q5" /> Service E</label>
+            <label><input type="checkbox" class="service-checkbox" data-target="q6" /> Service F</label>
+          </div>
+        </div>
+    
+        <!-- Example Questions (Initially Hidden) -->
+        <div id="q1" class="question-section hidden">
+          <p><strong>Service A: Question 1<br />How do you rate your experience with Service A?</strong></p>
+          <div class="form-group">
+            <label>Rating:</label>
+            <div class="rating-group">
+              <label><input type="radio" name="rating1" value="1" required /> 1</label>
+              <label><input type="radio" name="rating1" value="2" /> 2</label>
+              <label><input type="radio" name="rating1" value="3" /> 3</label>
+              <label><input type="radio" name="rating1" value="4" /> 4</label>
+              <label><input type="radio" name="rating1" value="5" /> 5</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="comment1">Comments:</label>
+            <textarea id="comment1" name="comment1" rows="3"></textarea>
+          </div>
+
+          <p><strong>Service A: Question 2<br />Service A wants to know more about this... how do you feel about it?</strong></p>
+          <div class="form-group">
+            <label for="comment1">Thoughts:</label>
+            <textarea id="comment1" name="comment1" rows="3"></textarea>
+          </div>
+        </div>
+
+    
+        <div id="q2" class="question-section hidden">
+          <p><strong>Service B: Question 1<br />How do you rate your experience with Service B?</strong></p>
+          <div class="form-group">
+            <label>Rating:</label>
+            <div class="rating-group">
+              <label><input type="radio" name="rating2" value="1" required /> 1</label>
+              <label><input type="radio" name="rating2" value="2" /> 2</label>
+              <label><input type="radio" name="rating2" value="3" /> 3</label>
+              <label><input type="radio" name="rating2" value="4" /> 4</label>
+              <label><input type="radio" name="rating2" value="5" /> 5</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="comment2">Comments:</label>
+            <textarea id="comment2" name="comment2" rows="3"></textarea>
+          </div>
+          
+          <p><strong>Service B: Question 2<br />Service B wants to know more about this... how do you feel about it?</strong></p>
+          <div class="form-group">
+            <label for="comment1">Thoughts:</label>
+            <textarea id="comment1" name="comment1" rows="3"></textarea>
+          </div>
+
+        </div>
+    
+        <!-- Repeat for questions q3 to q6 -->
+        <div id="q3" class="question-section hidden">
+          <p><strong>Service C: Question 1<br />How do you rate your experience with Service C?</strong></p>
+          <div class="form-group">
+            <label>Rating:</label>
+            <div class="rating-group">
+              <label><input type="radio" name="rating3" value="1" required /> 1</label>
+              <label><input type="radio" name="rating3" value="2" /> 2</label>
+              <label><input type="radio" name="rating3" value="3" /> 3</label>
+              <label><input type="radio" name="rating3" value="4" /> 4</label>
+              <label><input type="radio" name="rating3" value="5" /> 5</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="comment3">Comments:</label>
+            <textarea id="comment3" name="comment3" rows="3"></textarea>
+          </div>
+
+          <p><strong>Service C: Question 2<br />Service C wants to know more about this... how do you feel about it?</strong></p>
+          <div class="form-group">
+            <label for="comment1">Thoughts:</label>
+            <textarea id="comment1" name="comment1" rows="3"></textarea>
+          </div>
+        </div>
+    
+        <div id="q4" class="question-section hidden">
+          <p><strong>Service D: Question 1<br />How do you rate your experience with Service D?</strong></p>
+          <div class="form-group">
+            <label>Rating:</label>
+            <div class="rating-group">
+              <label><input type="radio" name="rating4" value="1" required /> 1</label>
+              <label><input type="radio" name="rating4" value="2" /> 2</label>
+              <label><input type="radio" name="rating4" value="3" /> 3</label>
+              <label><input type="radio" name="rating4" value="4" /> 4</label>
+              <label><input type="radio" name="rating4" value="5" /> 5</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="comment4">Comments:</label>
+            <textarea id="comment4" name="comment4" rows="3"></textarea>
+          </div>
+
+          <p><strong>Service D: Question 2<br />Service D wants to know more about this... how do you feel about it?</strong></p>
+          <div class="form-group">
+            <label for="comment1">Thoughts:</label>
+            <textarea id="comment1" name="comment1" rows="3"></textarea>
+          </div>
+        </div>
+    
+        <div id="q5" class="question-section hidden">
+          <p><strong>Service E: Question 1<br />How do you rate your experience with Service E?</strong></p>
+          <div class="form-group">
+            <label>Rating:</label>
+            <div class="rating-group">
+              <label><input type="radio" name="rating5" value="1" required /> 1</label>
+              <label><input type="radio" name="rating5" value="2" /> 2</label>
+              <label><input type="radio" name="rating5" value="3" /> 3</label>
+              <label><input type="radio" name="rating5" value="4" /> 4</label>
+              <label><input type="radio" name="rating5" value="5" /> 5</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="comment5">Comments:</label>
+            <textarea id="comment5" name="comment5" rows="3"></textarea>
+          </div>
+
+          <p><strong>Service E: Question 2<br />Service E wants to know more about this... how do you feel about it?</strong></p>
+          <div class="form-group">
+            <label for="comment1">Thoughts:</label>
+            <textarea id="comment1" name="comment1" rows="3"></textarea>
+          </div>
+        </div>
+    
+        <div id="q6" class="question-section hidden">
+          <p><strong>Service F: Question 1<br />How do you rate your experience with Service F?</strong></p>
+          <div class="form-group">
+            <label>Rating:</label>
+            <div class="rating-group">
+              <label><input type="radio" name="rating6" value="1" required /> 1</label>
+              <label><input type="radio" name="rating6" value="2" /> 2</label>
+              <label><input type="radio" name="rating6" value="3" /> 3</label>
+              <label><input type="radio" name="rating6" value="4" /> 4</label>
+              <label><input type="radio" name="rating6" value="5" /> 5</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="comment6">Comments:</label>
+            <textarea id="comment6" name="comment6" rows="3"></textarea>
+          </div>
+
+          <p><strong>Service F: Question 2<br />Service F wants to know more about this... how do you feel about it?</strong></p>
+          <div class="form-group">
+            <label for="comment1">Thoughts:</label>
+            <textarea id="comment1" name="comment1" rows="3"></textarea>
+          </div>
+        </div>
+
+    <!-- Question 1 -->
+    <div class="question-section">
+      <p><strong>Question 1:<br />How satisfied are you with our service?</strong></p>
+
+      <div class="form-group">
+        <label>Rating:</label>
+        <div class="rating-group">
+          <label><input type="radio" name="rating1" value="1" required /> 1</label>
+          <label><input type="radio" name="rating1" value="2" /> 2</label>
+          <label><input type="radio" name="rating1" value="3" /> 3</label>
+          <label><input type="radio" name="rating1" value="4" /> 4</label>
+          <label><input type="radio" name="rating1" value="5" /> 5</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="comment1">Comments:</label>
+        <textarea id="comment1" name="comment1" rows="3"></textarea>
+      </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="question-section">
+      <p><strong>Question 2:<br />Was the support helpful and responsive?</strong></p>
+
+      <div class="form-group">
+        <label>Rating:</label>
+        <div class="rating-group">
+          <label><input type="radio" name="rating2" value="1" required /> 1</label>
+          <label><input type="radio" name="rating2" value="2" /> 2</label>
+          <label><input type="radio" name="rating2" value="3" /> 3</label>
+          <label><input type="radio" name="rating2" value="4" /> 4</label>
+          <label><input type="radio" name="rating2" value="5" /> 5</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="comment2">Comments:</label>
+        <textarea id="comment2" name="comment2" rows="3"></textarea>
+      </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="question-section">
+      <p><strong>Question 3:<br />Would you recommend us to a friend?</strong></p>
+
+      <div class="form-group">
+        <label>Rating:</label>
+        <div class="rating-group">
+          <label><input type="radio" name="rating3" value="1" required /> 1</label>
+          <label><input type="radio" name="rating3" value="2" /> 2</label>
+          <label><input type="radio" name="rating3" value="3" /> 3</label>
+          <label><input type="radio" name="rating3" value="4" /> 4</label>
+          <label><input type="radio" name="rating3" value="5" /> 5</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="comment3">Comments:</label>
+        <textarea id="comment3" name="comment3" rows="3"></textarea>
+      </div>
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit">Submit</button>
+
+  </form>
+
+  <script>
+    // Toggle question visibility
+    document.querySelectorAll('.service-checkbox').forEach(checkbox => {
+      checkbox.addEventListener('change', function () {
+        const targetId = this.dataset.target;
+        const section = document.getElementById(targetId);
+        if (this.checked) {
+          section.classList.remove('hidden');
+        } else {
+          section.classList.add('hidden');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
+
                 <option value="student">Student</option>
                 <option value="intern">Intern</option>
                 <option value="professional">Professional</option>
