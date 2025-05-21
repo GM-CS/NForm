@@ -268,5 +268,35 @@
     });
   </script>
 
+  <script>
+    const services = document.querySelectorAll('.service-checkbox');
+
+    function toggleQuestions() {
+      services.forEach((service, index) => {
+        const qDiv = document.getElementById('q' + (index + 1));
+        const ratingInputs = qDiv.querySelectorAll('input[type="radio"]');
+        const commentInput = qDiv.querySelector('textarea[name^="comment"]');
+        const improveInput = qDiv.querySelector('input[name^="improve"]');
+
+        if (service.checked) {
+          qDiv.classList.remove('hidden');
+          ratingInputs.forEach(r => r.required = true);
+          if (commentInput) commentInput.required = false;
+          if (improveInput) improveInput.required = false;
+        } else {
+          qDiv.classList.add('hidden');
+          ratingInputs.forEach(r => r.required = false);
+          if (commentInput) commentInput.required = false;
+          if (improveInput) improveInput.required = false;
+          ratingInputs.forEach(r => r.checked = false);
+          if (commentInput) commentInput.value = '';
+          if (improveInput) improveInput.value = '';
+        }
+      });
+    }
+
+    services.forEach(cb => cb.addEventListener('change', toggleQuestions));
+  </script>
+
 </body>
 </html>
