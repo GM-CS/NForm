@@ -192,17 +192,17 @@
       <div class="form-group">
         <label>Rating:</label>
         <div class="rating-group">
-          <label><input type="radio" name="rating1" value="1" /> 1</label>
-          <label><input type="radio" name="rating1" value="2" /> 2</label>
-          <label><input type="radio" name="rating1" value="3" /> 3</label>
-          <label><input type="radio" name="rating1" value="4" /> 4</label>
-          <label><input type="radio" name="rating1" value="5" /> 5</label>
+          <label><input type="radio" name="rating7" value="1" /> 1</label>
+          <label><input type="radio" name="rating7" value="2" /> 2</label>
+          <label><input type="radio" name="rating7" value="3" /> 3</label>
+          <label><input type="radio" name="rating7" value="4" /> 4</label>
+          <label><input type="radio" name="rating7" value="5" /> 5</label>
         </div>
       </div>
 
       <div class="form-group">
-        <label for="comment1">Comments:</label>
-        <textarea id="comment1" name="comment1" rows="3"></textarea>
+        <label for="comment7">Comments:</label>
+        <textarea id="comment7" name="comment7" rows="3"></textarea>
       </div>
     </div>
 
@@ -213,17 +213,17 @@
       <div class="form-group">
         <label>Rating:</label>
         <div class="rating-group">
-          <label><input type="radio" name="rating2" value="1" /> 1</label>
-          <label><input type="radio" name="rating2" value="2" /> 2</label>
-          <label><input type="radio" name="rating2" value="3" /> 3</label>
-          <label><input type="radio" name="rating2" value="4" /> 4</label>
-          <label><input type="radio" name="rating2" value="5" /> 5</label>
+          <label><input type="radio" name="rating8" value="1" /> 1</label>
+          <label><input type="radio" name="rating8" value="2" /> 2</label>
+          <label><input type="radio" name="rating8" value="3" /> 3</label>
+          <label><input type="radio" name="rating8" value="4" /> 4</label>
+          <label><input type="radio" name="rating8" value="5" /> 5</label>
         </div>
       </div>
 
       <div class="form-group">
-        <label for="comment2">Comments:</label>
-        <textarea id="comment2" name="comment2" rows="3"></textarea>
+        <label for="comment8">Comments:</label>
+        <textarea id="comment8" name="comment8" rows="3"></textarea>
       </div>
     </div>
 
@@ -234,17 +234,17 @@
       <div class="form-group">
         <label>Rating:</label>
         <div class="rating-group">
-          <label><input type="radio" name="rating3" value="1" /> 1</label>
-          <label><input type="radio" name="rating3" value="2" /> 2</label>
-          <label><input type="radio" name="rating3" value="3" /> 3</label>
-          <label><input type="radio" name="rating3" value="4" /> 4</label>
-          <label><input type="radio" name="rating3" value="5" /> 5</label>
+          <label><input type="radio" name="rating9" value="1" /> 1</label>
+          <label><input type="radio" name="rating9" value="2" /> 2</label>
+          <label><input type="radio" name="rating9" value="3" /> 3</label>
+          <label><input type="radio" name="rating9" value="4" /> 4</label>
+          <label><input type="radio" name="rating9" value="5" /> 5</label>
         </div>
       </div>
 
       <div class="form-group">
-        <label for="comment3">Comments:</label>
-        <textarea id="comment3" name="comment3" rows="3"></textarea>
+        <label for="comment9">Comments:</label>
+        <textarea id="comment9" name="comment9" rows="3"></textarea>
       </div>
     </div>
 
@@ -296,6 +296,24 @@
     }
 
     services.forEach(cb => cb.addEventListener('change', toggleQuestions));
+  </script>
+
+  <script>
+        window.addEventListener("load", function() {
+      const form = document.getElementById('my-form');
+      form.addEventListener("submit", function(e) {
+        e.preventDefault();
+        const data = new FormData(form);
+        const action = e.target.action;
+        fetch(action, {
+          method: 'POST',
+          body: data,
+        })
+        .then(() => {
+          alert("Success!");
+        })
+      });
+    });
   </script>
 
 </body>
